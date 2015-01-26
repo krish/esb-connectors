@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="zohobooks_createInvoice" startOnLoad="true" statistics="disable" trace="disable" transports="https,http" xmlns="http://ws.apache.org/ns/synapse">
+   <target>
+      <inSequence>
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="authToken" expression="json-eval($.authToken)"/>
+         <property name="organizationId" expression="json-eval($.organizationId)"/>
+         <property name="customerId" expression="json-eval($.customerId)"/>
+         <property name="contactPersons" expression="json-eval($.contactPersons)"/>
+         <property name="invoiceNumber" expression="json-eval($.invoiceNumber)"/>
+         <property name="templateId" expression="json-eval($.templateId)"/>
+         <property name="date" expression="json-eval($.date)"/>
+         <property name="paymentTerms" expression="json-eval($.paymentTerms)"/>
+         <property name="paymentTermsLabel" expression="json-eval($.paymentTermsLabel)"/>
+         <property name="dueDate" expression="json-eval($.dueDate)"/>
+         <property name="discount" expression="json-eval($.discount)"/>
+         <property name="isDiscountBeforeTax" expression="json-eval($.isDiscountBeforeTax)"/>
+         <property name="discountType" expression="json-eval($.discountType)"/>
+         <property name="exchangeRate" expression="json-eval($.exchangeRate)"/>
+         <property name="recurringInvoiceId" expression="json-eval($.recurringInvoiceId)"/>
+         <property name="invoicedEstimateId" expression="json-eval($.invoicedEstimateId)"/>
+         <property name="salespersonName" expression="json-eval($.salespersonName)"/>
+         <property name="customFields" expression="json-eval($.customFields)"/>
+         <property name="lineItems" expression="json-eval($.lineItems)"/>
+         <property name="allowPartialPayments" expression="json-eval($.allowPartialPayments)"/>
+         <property name="customBody" expression="json-eval($.customBody)"/>
+         <property name="customSubject" expression="json-eval($.customSubject)"/>
+         <property name="notes" expression="json-eval($.notes)"/>
+         <property name="terms" expression="json-eval($.terms)"/>
+         <property name="shippingCharge" expression="json-eval($.shippingCharge)"/>
+         <property name="adjustment" expression="json-eval($.adjustment)"/>
+         <property name="adjustmentDescription" expression="json-eval($.adjustmentDescription)"/>
+         <property name="timeEntryIds" expression="json-eval($.timeEntryIds)"/>
+         <property name="paymentOptions" expression="json-eval($.paymentOptions)"/>
+         <property name="taxId" expression="json-eval($.taxId)"/>
+         <property name="taxAuthorityId" expression="json-eval($.taxAuthorityId)"/>
+         <property name="taxExemptionId" expression="json-eval($.taxExemptionId)"/>
+         <property name="avataxUseCode" expression="json-eval($.avataxUseCode)"/>
+         <property name="avataxExemptNo" expression="json-eval($.avataxExemptNo)"/>
+         <property name="vatTreatment" expression="json-eval($.vatTreatment)"/>
+         <property name="send" expression="json-eval($.send)"/>
+         <property name="ignoreAutoNumberGeneration" expression="json-eval($.ignoreAutoNumberGeneration)"/>
+         <zohobooks.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <authToken>{$ctx:authToken}</authToken>
+            <organizationId>{$ctx:organizationId}</organizationId>
+         </zohobooks.init>
+         <zohobooks.createInvoice>
+            <customerId>{$ctx:customerId}</customerId>
+            <contactPersons>{$ctx:contactPersons}</contactPersons>
+            <invoiceNumber>{$ctx:invoiceNumber}</invoiceNumber>
+            <templateId>{$ctx:templateId}</templateId>
+            <date>{$ctx:date}</date>
+            <paymentTerms>{$ctx:paymentTerms}</paymentTerms>
+            <paymentTermsLabel>{$ctx:paymentTermsLabel}</paymentTermsLabel>
+            <dueDate>{$ctx:dueDate}</dueDate>
+            <discount>{$ctx:discount}</discount>
+            <isDiscountBeforeTax>{$ctx:isDiscountBeforeTax}</isDiscountBeforeTax>
+            <discountType>{$ctx:discountType}</discountType>
+            <exchangeRate>{$ctx:exchangeRate}</exchangeRate>
+            <recurringInvoiceId>{$ctx:recurringInvoiceId}</recurringInvoiceId>
+            <invoicedEstimateId>{$ctx:invoicedEstimateId}</invoicedEstimateId>
+            <salespersonName>{$ctx:salespersonName}</salespersonName>
+            <customFields>{$ctx:customFields}</customFields>
+            <lineItems>{$ctx:lineItems}</lineItems>
+            <allowPartialPayments>{$ctx:allowPartialPayments}</allowPartialPayments>
+            <customBody>{$ctx:customBody}</customBody>
+            <customSubject>{$ctx:customSubject}</customSubject>
+            <notes>{$ctx:notes}</notes>
+            <terms>{$ctx:terms}</terms>
+            <shippingCharge>{$ctx:shippingCharge}</shippingCharge>
+            <adjustment>{$ctx:adjustment}</adjustment>
+            <adjustmentDescription>{$ctx:adjustmentDescription}</adjustmentDescription>
+            <timeEntryIds>{$ctx:timeEntryIds}</timeEntryIds>
+            <paymentOptions>{$ctx:paymentOptions}</paymentOptions>
+            <taxId>{$ctx:taxId}</taxId>
+            <taxAuthorityId>{$ctx:taxAuthorityId}</taxAuthorityId>
+            <taxExemptionId>{$ctx:taxExemptionId}</taxExemptionId>
+            <avataxUseCode>{$ctx:avataxUseCode}</avataxUseCode>
+            <avataxExemptNo>{$ctx:avataxExemptNo}</avataxExemptNo>
+            <vatTreatment>{$ctx:vatTreatment}</vatTreatment>
+            <send>{$ctx:send}</send>
+            <ignoreAutoNumberGeneration>{$ctx:ignoreAutoNumberGeneration}</ignoreAutoNumberGeneration>
+         </zohobooks.createInvoice>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>

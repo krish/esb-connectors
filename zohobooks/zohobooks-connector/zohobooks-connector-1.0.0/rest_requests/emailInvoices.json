@@ -1,0 +1,7 @@
+{
+    "invoiceIds": "119406000000052055,119406000000051027",
+    "authToken": "594cb85213f98ce15dfa9fe92330658a",
+    "apiUrl": "https://books.zoho.com",
+    "organizationId": "46892166",
+    "contacts": [ { "contact_id": "119406000000052049", "email": true, "snail_mail": false }]
+}

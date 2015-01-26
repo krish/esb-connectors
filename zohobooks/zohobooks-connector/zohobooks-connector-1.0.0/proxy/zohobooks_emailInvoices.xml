@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy xmlns="http://ws.apache.org/ns/synapse"
+       name="zohobooks_emailInvoices"
+       transports="https,http"
+       statistics="disable"
+       trace="disable"
+       startOnLoad="true">
+   <target>
+      <inSequence>
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="authToken" expression="json-eval($.authToken)"/>
+         <property name="organizationId" expression="json-eval($.organizationId)"/>
+         <property name="invoiceId" expression="json-eval($.invoiceId)"/>
+         <property name="contacts" expression="json-eval($.contacts)"/>
+         <property name="invoiceIds" expression="json-eval($.invoiceIds)"/>
+         <zohobooks.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <authToken>{$ctx:authToken}</authToken>
+            <organizationId>{$ctx:organizationId}</organizationId>
+         </zohobooks.init>
+         <zohobooks.emailInvoices>
+            <invoiceId>{$ctx:invoiceId}</invoiceId>
+            <contacts>{$ctx:contacts}</contacts>
+            <invoiceIds>{$ctx:invoiceIds}</invoiceIds>
+         </zohobooks.emailInvoices>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
+                                

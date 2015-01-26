@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="zohobooks_listInvoices" startOnLoad="true" statistics="disable" trace="disable" transports="https,http" xmlns="http://ws.apache.org/ns/synapse">
+   <target>
+      <inSequence>
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="authToken" expression="json-eval($.authToken)"/>
+         <property name="organizationId" expression="json-eval($.organizationId)"/>
+         <property name="invoiceNumber" expression="json-eval($.invoiceNumber.equals)"/>
+         <property name="invoiceNumberStartsWith" expression="json-eval($.invoiceNumber.startsWith)"/>
+         <property name="invoiceNumberContains" expression="json-eval($.invoiceNumber.contains)"/>
+         <property name="itemName" expression="json-eval($.itemName.equals)"/>
+         <property name="itemNameStartsWith" expression="json-eval($.itemName.startsWith)"/>
+         <property name="itemNameContains" expression="json-eval($.itemName.contains)"/>
+         <property name="itemId" expression="json-eval($.itemId)"/>
+         <property name="itemDescription" expression="json-eval($.itemDescription.equals)"/>
+         <property name="itemDescriptionStartsWith" expression="json-eval($.itemDescription.startsWith)"/>
+         <property name="itemDescriptionContains" expression="json-eval($.itemDescription.contains)"/>
+         <property name="referenceNumber" expression="json-eval($.referenceNumber.equals)"/>
+         <property name="referenceNumberStartsWith" expression="json-eval($.referenceNumber.startsWith)"/>
+         <property name="referenceNumberContains" expression="json-eval($.referenceNumber.contains)"/>
+         <property name="customerName" expression="json-eval($.customerName.equals)"/>
+         <property name="customerNameStartsWith" expression="json-eval($.customerName.startsWith)"/>
+         <property name="customerNameContains" expression="json-eval($.customerName.contains)"/>
+         <property name="email" expression="json-eval($.email)"/>
+         <property name="total" expression="json-eval($.total.equals)"/>
+         <property name="totalLessThan" expression="json-eval($.total.lessThan)"/>
+         <property name="totalLessEquals" expression="json-eval($.total.lessEquals)"/>
+         <property name="totalGreaterThan" expression="json-eval($.total.greaterThan)"/>
+         <property name="totalGreaterEquals" expression="json-eval($.total.greaterEquals)"/>
+         <property name="balanceLessThan" expression="json-eval($.balance.lessThan)"/>
+         <property name="balanceLessEquals" expression="json-eval($.balance.lessEquals)"/>
+         <property name="balanceGreaterThan" expression="json-eval($.balance.greaterThan)"/>
+         <property name="balanceGreaterEquals" expression="json-eval($.balance.greaterEquals)"/>
+         <property name="date" expression="json-eval($.date.equals)"/>
+         <property name="dateStart" expression="json-eval($.date.start)"/>
+         <property name="dateEnd" expression="json-eval($.date.end)"/>
+         <property name="dateBefore" expression="json-eval($.date.before)"/>
+         <property name="dateAfter" expression="json-eval($.date.after)"/>
+         <property name="dueDate" expression="json-eval($.dueDate.equals)"/>
+         <property name="dueDateStart" expression="json-eval($.dueDate.start)"/>
+         <property name="dueDateEnd" expression="json-eval($.dueDate.end)"/>
+         <property name="dueDateBefore" expression="json-eval($.dueDate.before)"/>
+         <property name="dueDateAfter" expression="json-eval($.dueDate.after)"/>
+         <property name="status" expression="json-eval($.status)"/>
+         <property name="customerId" expression="json-eval($.customerId)"/>
+         <property name="customField" expression="json-eval($.customField.equals)"/>
+         <property name="customFieldStartsWith" expression="json-eval($.customField.startsWith)"/>
+         <property name="customFieldContains" expression="json-eval($.customField.contains)"/>
+         <property name="searchText" expression="json-eval($.searchText)"/>
+         <property name="sortColumn" expression="json-eval($.sortColumn)"/>
+         <property name="filterBy" expression="json-eval($.filterBy)"/>
+         <property name="recurringInvoiceId" expression="json-eval($.recurringInvoiceId)"/>
+         <property name="balance" expression="json-eval($.balance.equals)"/>
+         <property name="page" expression="json-eval($.page)"/>
+         <property name="perPage" expression="json-eval($.perPage)"/>
+         <property name="appliedFilter" expression="json-eval($.appliedFilter)"/>
+         <property name="sortOrder" expression="json-eval($.sortOrder)"/>
+         <zohobooks.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <authToken>{$ctx:authToken}</authToken>
+            <organizationId>{$ctx:organizationId}</organizationId>
+         </zohobooks.init>
+         <zohobooks.listInvoices>
+            <page>{$ctx:page}</page>
+            <perPage>{$ctx:perPage}</perPage>
+            <appliedFilter>{$ctx:appliedFilter}</appliedFilter>
+            <sortOrder>{$ctx:sortOrder}</sortOrder>
+            <invoiceNumber>{$ctx:invoiceNumber}</invoiceNumber>
+            <invoiceNumberStartsWith>{$ctx:invoiceNumberStartsWith}</invoiceNumberStartsWith>
+            <invoiceNumberContains>{$ctx:invoiceNumberContains}</invoiceNumberContains>
+            <itemName>{$ctx:itemName}</itemName>
+            <itemNameStartsWith>{$ctx:itemNameStartsWith}</itemNameStartsWith>
+            <itemNameContains>{$ctx:itemNameContains}</itemNameContains>
+            <itemId>{$ctx:itemId}</itemId>
+            <itemDescription>{$ctx:itemDescription}</itemDescription>
+            <itemDescriptionStartsWith>{$ctx:itemDescriptionStartsWith}</itemDescriptionStartsWith>
+            <itemDescriptionContains>{$ctx:itemDescriptionContains}</itemDescriptionContains>
+            <referenceNumber>{$ctx:referenceNumber}</referenceNumber>
+            <referenceNumberStartsWith>{$ctx:referenceNumberStartsWith}</referenceNumberStartsWith>
+            <referenceNumberContains>{$ctx:referenceNumberContains}</referenceNumberContains>
+            <customerName>{$ctx:customerName}</customerName>
+            <customerNameStartsWith>{$ctx:customerNameStartsWith}</customerNameStartsWith>
+            <customerNameContains>{$ctx:customerNameContains}</customerNameContains>
+            <email>{$ctx:email}</email>
+            <total>{$ctx:total}</total>
+            <totalLessThan>{$ctx:totalLessThan}</totalLessThan>
+            <totalLessEquals>{$ctx:totalLessEquals}</totalLessEquals>
+            <totalGreaterThan>{$ctx:totalGreaterThan}</totalGreaterThan>
+            <totalGreaterEquals>{$ctx:totalGreaterEquals}</totalGreaterEquals>
+            <balanceLessThan>{$ctx:balanceLessThan}</balanceLessThan>
+            <balanceLessEquals>{$ctx:balanceLessEquals}</balanceLessEquals>
+            <balanceGreaterThan>{$ctx:balanceGreaterThan}</balanceGreaterThan>
+            <balanceGreaterEquals>{$ctx:balanceGreaterEquals}</balanceGreaterEquals>
+            <date>{$ctx:date}</date>
+            <dateStart>{$ctx:dateStart}</dateStart>
+            <dateEnd>{$ctx:dateEnd}</dateEnd>
+            <dateBefore>{$ctx:dateBefore}</dateBefore>
+            <dateAfter>{$ctx:dateAfter}</dateAfter>
+            <dueDate>{$ctx:dueDate}</dueDate>
+            <dueDateStart>{$ctx:dueDateStart}</dueDateStart>
+            <dueDateEnd>{$ctx:dueDateEnd}</dueDateEnd>
+            <dueDateBefore>{$ctx:dueDateBefore}</dueDateBefore>
+            <dueDateAfter>{$ctx:dueDateAfter}</dueDateAfter>
+            <status>{$ctx:status}</status>
+            <customerId>{$ctx:customerId}</customerId>
+            <customField>{$ctx:customField}</customField>
+            <customFieldStartsWith>{$ctx:customFieldStartsWith}</customFieldStartsWith>
+            <customFieldContains>{$ctx:customFieldContains}</customFieldContains>
+            <searchText>{$ctx:searchText}</searchText>
+            <sortColumn>{$ctx:sortColumn}</sortColumn>
+            <filterBy>{$ctx:filterBy}</filterBy>
+            <recurringInvoiceId>{$ctx:recurringInvoiceId}</recurringInvoiceId>
+            <balance>{$ctx:balance}</balance>
+         </zohobooks.listInvoices>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>

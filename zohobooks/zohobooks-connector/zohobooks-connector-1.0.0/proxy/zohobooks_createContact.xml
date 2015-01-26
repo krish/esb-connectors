@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="zohobooks_createContact" startOnLoad="true" statistics="disable" trace="disable" transports="https,http" xmlns="http://ws.apache.org/ns/synapse">
+   <target>
+      <inSequence>
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="authToken" expression="json-eval($.authToken)"/>
+         <property name="organizationId" expression="json-eval($.organizationId)"/>
+         <property name="creditnoteEmailTemplateId" expression="json-eval($.creditnoteEmailTemplateId)"/>
+         <property name="estimateEmailTemplateId" expression="json-eval($.estimateEmailTemplateId)"/>
+         <property name="invoiceEmailTemplateId" expression="json-eval($.invoiceEmailTemplateId)"/>
+         <property name="creditnoteTemplateId" expression="json-eval($.creditnoteTemplateId)"/>
+         <property name="estimateTemplateId" expression="json-eval($.estimateTemplateId)"/>
+         <property name="invoiceTemplateId" expression="json-eval($.invoiceTemplateId)"/>
+         <property name="vatRegNo" expression="json-eval($.vatRegNo)"/>
+         <property name="countryCode" expression="json-eval($.countryCode)"/>
+         <property name="avataxUseCode" expression="json-eval($.avataxUseCode)"/>
+         <property name="taxExemptionId" expression="json-eval($.taxExemptionId)"/>
+         <property name="vatTreatment" expression="json-eval($.vatTreatment)"/>
+         <property name="avataxExemptNo" expression="json-eval($.avataxExemptNo)"/>
+         <property name="taxAuthorityId" expression="json-eval($.taxAuthorityId)"/>
+         <property name="taxId" expression="json-eval($.taxId)"/>
+         <property name="taxIdValue" expression="json-eval($.taxIdValue)"/>
+         <property name="taxIdType" expression="json-eval($.taxIdType)"/>
+         <property name="track1099" expression="json-eval($.track1099)"/>
+         <property name="isPrimaryContact" expression="json-eval($.isPrimaryContact)"/>
+         <property name="email" expression="json-eval($.email)"/>
+         <property name="contactPersons" expression="json-eval($.contactPersons)"/>
+         <property name="shippingAddress" expression="json-eval($.shippingAddress)"/>
+         <property name="billingAddress" expression="json-eval($.billingAddress)"/>
+         <property name="customFields" expression="json-eval($.customFields)"/>
+         <property name="website" expression="json-eval($.website)"/>
+         <property name="companyName" expression="json-eval($.companyName)"/>
+         <property name="contactName" expression="json-eval($.contactName)"/>
+         <property name="isTaxable" expression="json-eval($.isTaxable)"/>
+         <property name="defaultTemplates" expression="json-eval($.defaultTemplates)"/>
+         <property name="notes" expression="json-eval($.notes)"/>
+		 <property name="paymentTerms" expression="json-eval($.paymentTerms)"/>
+         <property name="paymentTermsLabel" expression="json-eval($.paymentTermsLabel)"/>
+         <property name="currencyId" expression="json-eval($.currencyId)"/>
+         <zohobooks.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <authToken>{$ctx:authToken}</authToken>
+            <organizationId>{$ctx:organizationId}</organizationId>
+         </zohobooks.init>
+         <zohobooks.createContact>
+            <creditnoteEmailTemplateId>{$ctx:creditnoteEmailTemplateId}</creditnoteEmailTemplateId>
+            <estimateEmailTemplateId>{$ctx:estimateEmailTemplateId}</estimateEmailTemplateId>
+            <invoiceEmailTemplateId>{$ctx:invoiceEmailTemplateId}</invoiceEmailTemplateId>
+            <creditnoteTemplateId>{$ctx:creditnoteTemplateId}</creditnoteTemplateId>
+            <estimateTemplateId>{$ctx:estimateTemplateId}</estimateTemplateId>
+            <invoiceTemplateId>{$ctx:invoiceTemplateId}</invoiceTemplateId>
+            <vatRegNo>{$ctx:vatRegNo}</vatRegNo>
+            <countryCode>{$ctx:countryCode}</countryCode>
+            <avataxUseCode>{$ctx:avataxUseCode}</avataxUseCode>
+            <taxExemptionId>{$ctx:taxExemptionId}</taxExemptionId>
+            <vatTreatment>{$ctx:vatTreatment}</vatTreatment>
+            <avataxExemptNo>{$ctx:avataxExemptNo}</avataxExemptNo>
+            <taxAuthorityId>{$ctx:taxAuthorityId}</taxAuthorityId>
+            <taxId>{$ctx:taxId}</taxId>
+            <taxIdValue>{$ctx:taxIdValue}</taxIdValue>
+            <taxIdType>{$ctx:taxIdType}</taxIdType>
+            <track1099>{$ctx:track1099}</track1099>
+            <isPrimaryContact>{$ctx:isPrimaryContact}</isPrimaryContact>
+            <email>{$ctx:email}</email>
+            <contactPersons>{$ctx:contactPersons}</contactPersons>
+            <shippingAddress>{$ctx:shippingAddress}</shippingAddress>
+            <billingAddress>{$ctx:billingAddress}</billingAddress>
+            <customFields>{$ctx:customFields}</customFields>
+            <website>{$ctx:website}</website>
+            <companyName>{$ctx:companyName}</companyName>
+            <contactName>{$ctx:contactName}</contactName>
+            <isTaxable>{$ctx:isTaxable}</isTaxable>
+            <defaultTemplates>{$ctx:defaultTemplates}</defaultTemplates>
+            <notes>{$ctx:notes}</notes>
+			<paymentTerms>{$ctx:paymentTerms}</paymentTerms>
+            <paymentTermsLabel>{$ctx:paymentTermsLabel}</paymentTermsLabel>
+            <currencyId>{$ctx:currencyId}</currencyId>
+         </zohobooks.createContact>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="zohobooks_listItems" startOnLoad="true" statistics="disable" trace="disable" transports="https,http" xmlns="http://ws.apache.org/ns/synapse">
+   <target>
+      <inSequence>
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="authToken" expression="json-eval($.authToken)"/>
+         <property name="organizationId" expression="json-eval($.organizationId)"/>
+         <property name="searchText" expression="json-eval($.searchText)"/>
+         <property name="filterBy" expression="json-eval($.filterBy)"/>
+         <property name="taxName" expression="json-eval($.taxName)"/>
+         <property name="taxId" expression="json-eval($.taxId)"/>
+         <property name="name" expression="json-eval($.name.equals)"/>
+         <property name="nameStartsWith" expression="json-eval($.name.startsWith)"/>
+         <property name="nameContains" expression="json-eval($.name.contains)"/>
+         <property name="rate" expression="json-eval($.rate.equals)"/>
+         <property name="rateLessThan" expression="json-eval($.rate.lessThan)"/>
+         <property name="rateLessEquals" expression="json-eval($.rate.lessEquals)"/>
+         <property name="rateGreaterEquals" expression="json-eval($.rate.greaterEquals)"/>
+         <property name="accountId" expression="json-eval($.accountId)"/>
+         <property name="taxExemptionId" expression="json-eval($.taxExemptionId)"/>
+         <property name="isTaxable" expression="json-eval($.isTaxable)"/>
+         <property name="description" expression="json-eval($.description.equals)"/>
+         <property name="descriptionStartsWith" expression="json-eval($.description.startsWith)"/>
+         <property name="descriptionContains" expression="json-eval($.description.contains)"/>
+         <property name="rateGreaterThan" expression="json-eval($.rate.greaterThan)"/>
+         <property name="page" expression="json-eval($.page)"/>
+         <property name="perPage" expression="json-eval($.perPage)"/>
+         <property name="appliedFilter" expression="json-eval($.appliedFilter)"/>
+         <property name="sortOrder" expression="json-eval($.sortOrder)"/>
+         <property name="sortColumn" expression="json-eval($.sortColumn)"/>
+         <zohobooks.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <authToken>{$ctx:authToken}</authToken>
+            <organizationId>{$ctx:organizationId}</organizationId>
+         </zohobooks.init>
+         <zohobooks.listItems>
+            <page>{$ctx:page}</page>
+            <perPage>{$ctx:perPage}</perPage>
+            <appliedFilter>{$ctx:appliedFilter}</appliedFilter>
+            <sortOrder>{$ctx:sortOrder}</sortOrder>
+            <sortColumn>{$ctx:sortColumn}</sortColumn>
+            <searchText>{$ctx:searchText}</searchText>
+            <filterBy>{$ctx:filterBy}</filterBy>
+            <taxName>{$ctx:taxName}</taxName>
+            <taxId>{$ctx:taxId}</taxId>
+            <name>{$ctx:name}</name>
+            <nameStartsWith>{$ctx:nameStartsWith}</nameStartsWith>
+            <nameContains>{$ctx:nameContains}</nameContains>
+            <rate>{$ctx:rate}</rate>
+            <rateLessThan>{$ctx:rateLessThan}</rateLessThan>
+            <rateLessEquals>{$ctx:rateLessEquals}</rateLessEquals>
+            <rateGreaterEquals>{$ctx:rateGreaterEquals}</rateGreaterEquals>
+            <accountId>{$ctx:accountId}</accountId>
+            <taxExemptionId>{$ctx:taxExemptionId}</taxExemptionId>
+            <isTaxable>{$ctx:isTaxable}</isTaxable>
+            <description>{$ctx:description}</description>
+            <descriptionStartsWith>{$ctx:descriptionStartsWith}</descriptionStartsWith>
+            <descriptionContains>{$ctx:descriptionContains}</descriptionContains>
+            <rateGreaterThan>{$ctx:rateGreaterThan}</rateGreaterThan>
+         </zohobooks.listItems>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>

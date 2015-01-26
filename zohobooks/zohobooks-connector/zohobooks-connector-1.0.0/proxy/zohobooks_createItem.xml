@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="zohobooks_createItem" startOnLoad="true" statistics="disable" trace="disable" transports="https,http" xmlns="http://ws.apache.org/ns/synapse">
+   <target>
+      <inSequence>
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="authToken" expression="json-eval($.authToken)"/>
+         <property name="organizationId" expression="json-eval($.organizationId)"/>
+         <property name="itemName" expression="json-eval($.itemName)"/>
+         <property name="description" expression="json-eval($.description)"/>
+         <property name="accountId" expression="json-eval($.accountId)"/>
+         <property name="taxId" expression="json-eval($.taxId)"/>
+         <property name="isTaxable" expression="json-eval($.isTaxable)"/>
+         <property name="taxExemptionId" expression="json-eval($.taxExemptionId)"/>
+         <property name="avataxTaxCode" expression="json-eval($.avataxTaxCode)"/>
+         <property name="avataxUseCode" expression="json-eval($.avataxUseCode)"/>
+         <property name="productType" expression="json-eval($.productType)"/>
+         <property name="itemType" expression="json-eval($.itemType)"/>
+         <property name="purchaseRate" expression="json-eval($.purchaseRate)"/>
+         <property name="purchaseAccountId" expression="json-eval($.purchaseAccountId)"/>
+         <property name="inventoryAccountId" expression="json-eval($.inventoryAccountId)"/>
+         <property name="vendorId" expression="json-eval($.vendorId)"/>
+         <property name="reorderLevel" expression="json-eval($.reorderLevel)"/>
+         <property name="initialStock" expression="json-eval($.initialStock)"/>
+         <property name="initialStockRate" expression="json-eval($.initialStockRate)"/>
+         <property name="purchaseDescription" expression="json-eval($.purchaseDescription)"/>
+         <property name="rate" expression="json-eval($.rate)"/>
+         <property name="unit" expression="json-eval($.unit)"/>
+         <property name="taxPercentage" expression="json-eval($.taxPercentage)"/>
+         <property name="purchaseAccountName" expression="json-eval($.purchaseAccountName)"/>
+         <zohobooks.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <authToken>{$ctx:authToken}</authToken>
+            <organizationId>{$ctx:organizationId}</organizationId>
+         </zohobooks.init>
+         <zohobooks.createItem>
+            <itemName>{$ctx:itemName}</itemName>
+            <description>{$ctx:description}</description>
+            <accountId>{$ctx:accountId}</accountId>
+            <taxId>{$ctx:taxId}</taxId>
+            <isTaxable>{$ctx:isTaxable}</isTaxable>
+            <taxExemptionId>{$ctx:taxExemptionId}</taxExemptionId>
+            <avataxTaxCode>{$ctx:avataxTaxCode}</avataxTaxCode>
+            <avataxUseCode>{$ctx:avataxUseCode}</avataxUseCode>
+            <productType>{$ctx:productType}</productType>
+            <itemType>{$ctx:itemType}</itemType>
+            <purchaseRate>{$ctx:purchaseRate}</purchaseRate>
+            <purchaseAccountId>{$ctx:purchaseAccountId}</purchaseAccountId>
+            <inventoryAccountId>{$ctx:inventoryAccountId}</inventoryAccountId>
+            <vendorId>{$ctx:vendorId}</vendorId>
+            <reorderLevel>{$ctx:reorderLevel}</reorderLevel>
+            <initialStock>{$ctx:initialStock}</initialStock>
+            <initialStockRate>{$ctx:initialStockRate}</initialStockRate>
+            <purchaseDescription>{$ctx:purchaseDescription}</purchaseDescription>
+            <rate>{$ctx:rate}</rate>
+            <unit>{$ctx:unit}</unit>
+            <taxPercentage>{$ctx:taxPercentage}</taxPercentage>
+            <purchaseAccountName>{$ctx:purchaseAccountName}</purchaseAccountName>
+         </zohobooks.createItem>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>

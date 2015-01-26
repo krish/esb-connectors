@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="zohobooks_listContacts" startOnLoad="true" statistics="disable" trace="disable" transports="https,http" xmlns="http://ws.apache.org/ns/synapse">
+   <target>
+      <inSequence>
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="authToken" expression="json-eval($.authToken)"/>
+         <property name="organizationId" expression="json-eval($.organizationId)"/>
+         <property name="sortColumn" expression="json-eval($.sortColumn)"/>
+         <property name="searchText" expression="json-eval($.searchText)"/>
+         <property name="filterBy" expression="json-eval($.filterBy)"/>
+         <property name="phoneStartsWith" expression="json-eval($.phoneStartsWith)"/>
+         <property name="companyNameStartsWith" expression="json-eval($.companyName.startsWith)"/>
+         <property name="phone" expression="json-eval($.phone.equals)"/>
+         <property name="firstNameContains" expression="json-eval($.firstName.contains)"/>
+         <property name="lastNameContains" expression="json-eval($.lastName.contains)"/>
+         <property name="emailContains" expression="json-eval($.email.contains)"/>
+         <property name="phoneContains" expression="json-eval($.phone.contains)"/>
+         <property name="companyNameContains" expression="json-eval($.companyName.contains)"/>
+         <property name="contactNameStartsWith" expression="json-eval($.contactName.startsWith)"/>
+         <property name="contactNameContains" expression="json-eval($.contactName.contains)"/>
+         <property name="lastName" expression="json-eval($.lastName.equals)"/>
+         <property name="email" expression="json-eval($.email.equals)"/>
+         <property name="companyName" expression="json-eval($.companyName.equals)"/>
+         <property name="lastNameStartsWith" expression="json-eval($.lastName.startsWith)"/>
+         <property name="firstNameStartsWith" expression="json-eval($.firstName.startsWith)"/>
+         <property name="emailStartsWith" expression="json-eval($.email.startsWith)"/>
+         <property name="address" expression="json-eval($.address.equals)"/>
+         <property name="addressStartsWith" expression="json-eval($.address.startsWith)"/>
+         <property name="addressContains" expression="json-eval($.address.contains)"/>
+         <property name="contactName" expression="json-eval($.contactName.equals)"/>
+         <property name="firstName" expression="json-eval($.firstName.equals)"/>
+         <property name="page" expression="json-eval($.page)"/>
+         <property name="perPage" expression="json-eval($.perPage)"/>
+         <property name="appliedFilter" expression="json-eval($.appliedFilter)"/>
+         <property name="sortOrder" expression="json-eval($.sortOrder)"/>
+         <zohobooks.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <authToken>{$ctx:authToken}</authToken>
+            <organizationId>{$ctx:organizationId}</organizationId>
+         </zohobooks.init>
+         <zohobooks.listContacts>
+            <page>{$ctx:page}</page>
+            <perPage>{$ctx:perPage}</perPage>
+            <appliedFilter>{$ctx:appliedFilter}</appliedFilter>
+            <sortOrder>{$ctx:sortOrder}</sortOrder>
+            <sortColumn>{$ctx:sortColumn}</sortColumn>
+            <searchText>{$ctx:searchText}</searchText>
+            <filterBy>{$ctx:filterBy}</filterBy>
+            <phoneStartsWith>{$ctx:phoneStartsWith}</phoneStartsWith>
+            <companyNameStartsWith>{$ctx:companyNameStartsWith}</companyNameStartsWith>
+            <phone>{$ctx:phone}</phone>
+            <firstNameContains>{$ctx:firstNameContains}</firstNameContains>
+            <lastNameContains>{$ctx:lastNameContains}</lastNameContains>
+            <emailContains>{$ctx:emailContains}</emailContains>
+            <phoneContains>{$ctx:phoneContains}</phoneContains>
+            <companyNameContains>{$ctx:companyNameContains}</companyNameContains>
+            <contactNameStartsWith>{$ctx:contactNameStartsWith}</contactNameStartsWith>
+            <contactNameContains>{$ctx:contactNameContains}</contactNameContains>
+            <lastName>{$ctx:lastName}</lastName>
+            <email>{$ctx:email}</email>
+            <companyName>{$ctx:companyName}</companyName>
+            <lastNameStartsWith>{$ctx:lastNameStartsWith}</lastNameStartsWith>
+            <firstNameStartsWith>{$ctx:firstNameStartsWith}</firstNameStartsWith>
+            <emailStartsWith>{$ctx:emailStartsWith}</emailStartsWith>
+            <address>{$ctx:address}</address>
+            <addressStartsWith>{$ctx:addressStartsWith}</addressStartsWith>
+            <addressContains>{$ctx:addressContains}</addressContains>
+            <contactName>{$ctx:contactName}</contactName>
+            <firstName>{$ctx:firstName}</firstName>
+         </zohobooks.listContacts>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>
