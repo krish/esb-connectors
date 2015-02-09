@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="zohobooks_getInvoice" startOnLoad="true" statistics="disable" trace="disable" transports="https,http" xmlns="http://ws.apache.org/ns/synapse">
+   <target>
+      <inSequence>
+         <property name="apiUrl" expression="json-eval($.apiUrl)"/>
+         <property name="authToken" expression="json-eval($.authToken)"/>
+         <property name="organizationId" expression="json-eval($.organizationId)"/>
+         <property name="invoiceId" expression="json-eval($.invoiceId)"/>
+         <property name="shouldPrint" expression="json-eval($.shouldPrint)"/>
+         <property name="invoiceFormat" expression="json-eval($.invoiceFormat)"/>
+         <zohobooks.init>
+            <apiUrl>{$ctx:apiUrl}</apiUrl>
+            <authToken>{$ctx:authToken}</authToken>
+            <organizationId>{$ctx:organizationId}</organizationId>
+         </zohobooks.init>
+         <zohobooks.getInvoice>
+            <invoiceId>{$ctx:invoiceId}</invoiceId>
+            <shouldPrint>{$ctx:shouldPrint}</shouldPrint>
+            <invoiceFormat>{$ctx:invoiceFormat}</invoiceFormat>
+         </zohobooks.getInvoice>
+         <respond/>
+      </inSequence>
+      <outSequence>
+         <log/>
+         <send/>
+      </outSequence>
+   </target>
+   <description/>
+</proxy>

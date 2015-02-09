@@ -1,0 +1,47 @@
+{
+    "lastName": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    },
+    "phone": {
+        "equals": "",
+        "contains": ""
+    },
+    "authToken": "594cb85213f98ce15dfa9fe92330658a",
+    "organizationId": "46892166",
+    "companyName": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    },
+    "phoneStartsWith": "",
+    "sortColumn": "contact_name",
+    "perPage": 20,
+    "page": 1,
+    "appliedFilter": "",
+    "sortOrder": "D",
+    "address": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    },
+    "email": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    },
+    "contactName": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    },
+    "apiUrl": "https://books.zoho.com",
+    "searchText": "",
+    "filterBy": "Status.All",
+    "firstName": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    }
+}

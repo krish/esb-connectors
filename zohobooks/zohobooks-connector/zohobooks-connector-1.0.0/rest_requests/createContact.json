@@ -1,0 +1,86 @@
+{
+    "apiUrl": "https://books.zoho.com",
+    "authToken": "594cb85213f98ce15dfa9fe92330658a",
+    "organizationId": "46892166",
+    "contactName": "Rohitha",
+    "contactPersons": [
+        {
+            "salutation": "Mr.",
+            "first_name": "Will",
+            "last_name": "Smith",
+            "email": "willsmith@bowmanfurniture.com",
+            "phone": "+1-925-921-9201",
+            "mobile": "+1-4054439562",
+            "is_primary_contact": true
+        },
+        {
+            "salutation": "Mr.",
+            "first_name": "Peter",
+            "last_name": "Parker",
+            "email": "peterparker@bowmanfurniture.com",
+            "phone": "+1-925-929-7211",
+            "mobile": "+1-4054439760"
+        }
+    ],
+    "taxIdValue": "119406000000049001",
+    "isTaxable": true,
+    "estimateEmailTemplateId": "119406000000017003",
+    "invoiceEmailTemplateId": "119406000000035014",
+    "estimateTemplateId": "119406000000017003",
+    "taxIdType": "SSN",
+    "creditnoteEmailTemplateId": "119406000000017005",
+    "vatTreatment": "234",
+    "taxExemptionId": "234",
+    "invoiceTemplateId": "119406000000035014",
+    "avataxUseCode": "234",
+    "defaultTemplates": {
+        "invoice_template_id": "119406000000017001",
+        "estimate_template_id": "119406000000035014",
+        "creditnote_template_id": "119406000000035014",
+        "invoice_email_template_id": "119406000000035014",
+        "estimate_email_template_id": "119406000000035014",
+        "creditnote_email_template_id": "119406000000035014"
+    },
+    "track1099": true,
+    "shippingAddress": {
+        "address": "Suite 125, McMillan Avenue",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "94134",
+        "country": "USA",
+        "fax": "+1-925-924-9600"
+    },
+    "website": "www.virtusa.com",
+    "customFields": [
+        {
+            "index": 1,
+            "value": "GBGD078"
+        },
+        {
+            "index": 2,
+            "value": "F6JSD86KH7G"
+        },
+        {
+            "index": 3,
+            "value": "www.bowman.in"
+        }
+    ],
+    "countryCode": "01",
+    "companyName": "Virtusa",
+    "creditnoteTemplateId": "119406000000035014",
+    "isPrimaryContact": true,
+    "avataxExemptNo": "3453",
+    "taxId": "119406000000049001",
+    "email": "rohitha@gmail.com",
+    "vatRegNo": "1231",
+    "billingAddress": {
+        "address": "4900 Hopyard Rd, Suite 310",
+        "city": "Pleasanton",
+        "state": "CA",
+        "zip": "94588",
+        "country": "USA",
+        "fax": "+1-925-924-9600"
+    },
+    "notes": "Payment option Through check",
+    "taxAuthorityId": "435"
+}

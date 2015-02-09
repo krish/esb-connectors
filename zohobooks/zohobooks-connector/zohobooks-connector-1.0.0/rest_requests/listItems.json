@@ -1,0 +1,35 @@
+{
+    "apiUrl": "https://books.zoho.com",
+    "authToken": "594cb85213f98ce15dfa9fe92330658a",
+    "organizationId": "46892166",
+    "sortColumn": "",
+    "perPage": 100,
+    "page": 1,
+    "appliedFilter": "",
+    "sortOrder": "",
+    "taxName": "",
+    "searchText": "",
+    "filterBy": "Status.All",
+    "taxName": "",
+    "taxId": "",
+    "name": {
+        "equals": "",
+        "startsWith": "",
+        "contains": ""
+    },
+    "rate": {
+        "equals": "",
+        "lessThan": "",
+        "lessEquals": "",
+        "greaterEquals": "",
+        "greaterThan": ""
+    },
+    "accountId": "",
+    "taxExemptionId": "",
+    "isTaxable": "",
+    "description": {
+        "equals": "",
+        "startsWith": "",
+        "contains": ""
+    }
+}

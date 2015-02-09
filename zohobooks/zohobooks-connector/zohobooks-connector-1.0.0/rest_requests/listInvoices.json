@@ -1,0 +1,75 @@
+{
+    "total": {
+        "lessThan": "",
+        "equals": "",
+        "greaterThan": "",
+        "lessEquals": "",
+        "greaterEquals": ""
+    },
+    "customerName": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    },
+    "itemName": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    },
+    "customField": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    },
+    "status": "sent",
+    "referenceNumber": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    },
+    "authToken": "594cb85213f98ce15dfa9fe92330658a",
+    "recurringInvoiceId": "",
+    "invoiceNumber": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    },
+    "organizationId": "46892166",
+    "itemId": "",
+    "date": {
+        "after": "",
+        "start": "",
+        "equals": "",
+        "before": "",
+        "end": ""
+    },
+    "balance": {
+        "lessThan": "",
+        "equals": "",
+        "greaterThan": "",
+        "lessEquals": "",
+        "greaterEquals": ""
+    },
+    "sortColumn": "",
+    "perPage": 100,
+    "page": 1,
+    "appliedFilter": "",
+    "sortOrder": "",
+    "itemDescription": {
+        "startsWith": "",
+        "equals": "",
+        "contains": ""
+    },
+    "customerId": "",
+    "email": "",
+    "apiUrl": "https://books.zoho.com",
+    "searchText": "",
+    "filterBy": "",
+    "dueDate": {
+        "after": "",
+        "start": "",
+        "equals": "",
+        "before": "",
+        "end": ""
+    }
+}
