@@ -44,7 +44,7 @@ Steps to follow in setting integration test.
  8. Update the Ronin properties file at location "<RONIN_CONNECTOR_HOME>/ronin-connector/ronin-connector-1.0.0/org.wso2.carbon.connector/src/test/resources/artifacts/ESB/connector/config" as below.
 	
 	i)		apiUrl 							- 	The API URL specific to the created Ronin account (e.g. https://[subdomain].roninapp.com).
-	ii) 	apiToken						-   Use the API  token obtained under step 5 ii).
+	ii) 	apiToken						-   Use the API  token obtained under step 6 ii).
 	iii)	cilentName						-   A String value for the client name to create a client with mandatory parameters.
 	iv)		cilentNameOpt					-	A String value for the client name to create a client with optional parameters.
 	v)		cilentAddress					-	A String value for the client address to create a client with optional parameters.
