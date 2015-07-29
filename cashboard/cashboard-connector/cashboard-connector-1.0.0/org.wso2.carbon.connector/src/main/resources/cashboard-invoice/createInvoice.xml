@@ -18,8 +18,8 @@
 -->
 <!-- API Doc: https://api.cashboardapp.com/invoices -->
 <template name="createInvoice" xmlns="http://ws.apache.org/ns/synapse">
-   <parameter name="clientId" description="The unique identifier of the invoice." />
-   <parameter name="clientType" description="Whether the tpe of the client is a 'Company' or a 'Person.'" />
+   <parameter name="clientId" description="ID of a Client Contact or Client Company." />
+   <parameter name="clientType" description="Whether the type of the client is a 'Company' or a 'Person.'" />
    <parameter name="address" description="Address of the client." />
    <parameter name="assignedId" description="The display 'number' of an invoice." />
    <parameter name="createdOn" description="Creation date of this invoice." />
